@@ -1,57 +1,45 @@
-Zcash 1.1.2
-=============
-
-What is Zcash?
+Litcoin
 --------------
 
-[Zcash](https://z.cash/) is an implementation of the "Zerocash" protocol.
-Based on Bitcoin's code, it intends to offer a far higher standard of privacy
-through a sophisticated zero-knowledge proving scheme that preserves
-confidentiality of transaction metadata. Technical details are available
-in our [Protocol Specification](https://github.com/zcash/zips/raw/master/protocol/protocol.pdf).
+An experimental private and decentralized cryptocurrency built for college students by college students. Pay anonymously.
 
-This software is the Zcash client. It downloads and stores the entire history
-of Zcash transactions; depending on the speed of your computer and network
-connection, the synchronization process could take a day or more once the
-blockchain has reached a significant size.
-
-Security Warnings
+Why Litcoin?
 -----------------
 
-See important security warnings on the
-[Security Information page](https://z.cash/support/security/).
+**Private:** Your transactional data such as who is involved in transactions and how much value is sent is shielded from prying eyes. Litcoin utilizes the same privacy technology as Z-Cash called zk-snarks. This zero knowledge technology means that you can transact with trust without sacrificing your privacy. 
 
-**Zcash is experimental and a work-in-progress.** Use at your own risk.
+**Secure:** Litcoin is a decentralized peer to peer network allowing for transactions without a middle man. Transactions are recording on public ledger and verified through Proof of Work.
 
-Deprecation Policy
+**Mission:** We introduce, teach and engage college students about the blockchain. We try to engage not only computer scientists, but students of all kinds to help bring them into understand blockchain technology and the value it can unlock.
+
+**Opportunities:** College students with various majors can come together across universities to get real world experience with blockchain technology.
+
+**Quick Remittance:** Pay and get paid faster than Bitcoin while also being anonymous. Paying college tuition from around the world just got a whole lot easier. 
+
+**Usability:** We prioritize usability and understanding. Our goal is to create simple web and mobile apps that are usable for college students with global availability to accelerate platform adoption. 
+
+
+
+FAQ:
 ------------------
 
-This release is considered deprecated 16 weeks after the release day. There
-is an automatic deprecation shutdown feature which will halt the node some
-time after this 16 week time period. The automatic feature is based on block
-height and can be explicitly disabled.
+**What exchanges support litocin?**
 
-Where do I begin?
------------------
-We have a guide for joining the main Zcash network:
-https://github.com/zcash/zcash/wiki/1.0-User-Guide
+Currently none.
 
-### Need Help?
+**Where can I buy litcoin?**
 
-* See the documentation at the [Zcash Wiki](https://github.com/zcash/zcash/wiki)
-  for help and more information.
-* Ask for help on the [Zcash](https://forum.z.cash/) forum.
+Buy some from verified posters and ask exchanges to list Litcoin. Be weary of scams.
 
-Participation in the Zcash project is subject to a
-[Code of Conduct](code_of_conduct.md).
+**How do I mine litcoin?**
 
-Building
---------
+You can mine litcoin by joining a pool: XYZ, asd
 
-Build Zcash along with most dependencies from source by running
-./zcutil/build.sh. Currently only Linux is officially supported.
+**How can I join or help Litcoin?** 
 
-License
--------
+We are always looking for help with litcoin and love college students. Send us an email of what you think you can help us with. If you’re a developer, we have a list of github issues: 
 
-For license information see the file [COPYING](COPYING).
+**Was there an ICO?**
+
+No there was no ICO. We are a community trying to educate college students and eventually more on (1) benefits of cryptocurrencies, (2) improving availability and usability of crypto and (3) educate on concepts and how they can apply their knowledge to be valuable to the community 
+
