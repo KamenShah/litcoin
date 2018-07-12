@@ -288,7 +288,6 @@ public:
             0x2007ffff, 4, 0);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x" + consensus.hashGenesisBlock.ToString()));
-        assert(genesis.hashMerkleRoot == uint256S("0x" + consensus.hashGenesisBlock.ToString()));
 
         vFixedSeeds.clear();
         vSeeds.clear();
