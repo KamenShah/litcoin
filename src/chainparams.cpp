@@ -59,7 +59,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, const uint256& nNonce, const std::vector<unsigned char>& nSolution, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "Zcash0b9c4eef8b7cc417ee5001e3500984b6fea35683a7cac141a043c42064835d34";
+    const char* pszTimestamp = "Litcoin-BTCBlock#a6220416b279527c4b857597456f7990cbff7848c0eed8765bf5be39256214a1";
     const CScript genesisOutputScript = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nSolution, nBits, nVersion, genesisReward);
 }
@@ -88,8 +88,8 @@ public:
         consensus.nMajorityEnforceBlockUpgrade = 750;
         consensus.nMajorityRejectBlockOutdated = 950;
         consensus.nMajorityWindow = 4000;
-        consensus.powLimit = uint256S("0007ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.nPowAveragingWindow = 1;
+        consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.nPowAveragingWindow = 0;
         assert(maxUint/UintToArith256(consensus.powLimit) >= consensus.nPowAveragingWindow);
         consensus.nPowMaxAdjustDown = 32; // 32% adjustment down
         consensus.nPowMaxAdjustUp = 16; // 16% adjustment up
@@ -123,13 +123,13 @@ public:
         nEquihashK = K;
 
         genesis = CreateGenesisBlock(
-            1477641360,
-            uint256S("0x0000000000000000000000000000000000000000000000000000000000001257"),
-            ParseHex("000a889f00854b8665cd555f4656f68179d31ccadc1b1f7fb0952726313b16941da348284d67add4686121d4e3d930160c1348d8191c25f12b267a6a9c131b5031cbf8af1f79c9d513076a216ec87ed045fa966e01214ed83ca02dc1797270a454720d3206ac7d931a0a680c5c5e099057592570ca9bdf6058343958b31901fce1a15a4f38fd347750912e14004c73dfe588b903b6c03166582eeaf30529b14072a7b3079e3a684601b9b3024054201f7440b0ee9eb1a7120ff43f713735494aa27b1f8bab60d7f398bca14f6abb2adbf29b04099121438a7974b078a11635b594e9170f1086140b4173822dd697894483e1c6b4e8b8dcd5cb12ca4903bc61e108871d4d915a9093c18ac9b02b6716ce1013ca2c1174e319c1a570215bc9ab5f7564765f7be20524dc3fdf8aa356fd94d445e05ab165ad8bb4a0db096c097618c81098f91443c719416d39837af6de85015dca0de89462b1d8386758b2cf8a99e00953b308032ae44c35e05eb71842922eb69797f68813b59caf266cb6c213569ae3280505421a7e3a0a37fdf8e2ea354fc5422816655394a9454bac542a9298f176e211020d63dee6852c40de02267e2fc9d5e1ff2ad9309506f02a1a71a0501b16d0d36f70cdfd8de78116c0c506ee0b8ddfdeb561acadf31746b5a9dd32c21930884397fb1682164cb565cc14e089d66635a32618f7eb05fe05082b8a3fae620571660a6b89886eac53dec109d7cbb6930ca698a168f301a950be152da1be2b9e07516995e20baceebecb5579d7cdbc16d09f3a50cb3c7dffe33f26686d4ff3f8946ee6475e98cf7b3cf9062b6966e838f865ff3de5fb064a37a21da7bb8dfd2501a29e184f207caaba364f36f2329a77515dcb710e29ffbf73e2bbd773fab1f9a6b005567affff605c132e4e4dd69f36bd201005458cfbd2c658701eb2a700251cefd886b1e674ae816d3f719bac64be649c172ba27a4fd55947d95d53ba4cbc73de97b8af5ed4840b659370c556e7376457f51e5ebb66018849923db82c1c9a819f173cccdb8f3324b239609a300018d0fb094adf5bd7cbb3834c69e6d0b3798065c525b20f040e965e1a161af78ff7561cd874f5f1b75aa0bc77f720589e1b810f831eac5073e6dd46d00a2793f70f7427f0f798f2f53a67e615e65d356e66fe40609a958a05edb4c175bcc383ea0530e67ddbe479a898943c6e3074c6fcc252d6014de3a3d292b03f0d88d312fe221be7be7e3c59d07fa0f2f4029e364f1f355c5d01fa53770d0cd76d82bf7e60f6903bc1beb772e6fde4a70be51d9c7e03c8d6d8dfb361a234ba47c470fe630820bbd920715621b9fbedb49fcee165ead0875e6c2b1af16f50b5d6140cc981122fcbcf7c5a4e3772b3661b628e08380abc545957e59f634705b1bbde2f0b4e055a5ec5676d859be77e20962b645e051a880fddb0180b4555789e1f9344a436a84dc5579e2553f1e5fb0a599c137be36cabbed0319831fea3fddf94ddc7971e4bcf02cdc93294a9aab3e3b13e3b058235b4f4ec06ba4ceaa49d675b4ba80716f3bc6976b1fbf9c8bf1f3e3a4dc1cd83ef9cf816667fb94f1e923ff63fef072e6a19321e4812f96cb0ffa864da50ad74deb76917a336f31dce03ed5f0303aad5e6a83634f9fcc371096f8288b8f02ddded5ff1bb9d49331e4a84dbe1543164438fde9ad71dab024779dcdde0b6602b5ae0a6265c14b94edd83b37403f4b78fcd2ed555b596402c28ee81d87a909c4e8722b30c71ecdd861b05f61f8b1231795c76adba2fdefa451b283a5d527955b9f3de1b9828e7b2e74123dd47062ddcc09b05e7fa13cb2212a6fdbc65d7e852cec463ec6fd929f5b8483cf3052113b13dac91b69f49d1b7d1aec01c4a68e41ce157"),
+            1531416476,
+            uint256S("0x0000000000000000000000000000000000000000000000000000000000000012"),
+            ParseHex("0020812d53c3c4eac22158a173d9f10a3e2c37984d216ccf970b9f7edbaa6cb484f6d0d5578ed0bf612f15b770d2d13bb85de1aef319762c5cab040698917b18fb8e1fa7a96287695d69cec37dc986aa8298d123007fe9f4b20c6814cc8394f6e9796ca6ab513b5d490837c31918119198fb72f26c5d555761746dcd0e4e1fea5bd7271bb70b48d177459dda491ed2855790072fbf81babdaa8fe37751996e42ce08d7042b1e02df09b5ade172205baf683df274bbf1f00dc83b32539511ba72ba04898247d70d22acd0befec6943b5558180b376a13bfadf217af6801b59f358bfb006c5b24a8368b6f80226cf951f7a3a38c43aa71194f8c6d3b3314cf0c1d2f661a8db9d9b6a5a0676ed9de34b8c9a81eb8029734cf00adeb4232b0602583dd21e0b755fc1d38fb171096505720fe932709df0461d6e4101aff2021949e49eb207fe683a2ed679ee2c8f21f5b70f603d5b8b887ce16adf70f56f601775dcb53a67be3fc132eb67955a120e91e30044466a44a033026bfda9a1349cc3314113384d27812f6ceb789b2086b9492d42f8f5c3510fcbdeffbdc44aa3faa564161b3ae79d21886958ac761a18938f941993b687c7c92df28d821188d19dd7489c3a0519fc5b68951f25efa781be79221b9d4131365e7e78a8ea34d8d591a3144dd338bf93487de8747b25f99f40713bb676851716b60ac8d11064c552db01cd5771d9f80a654300b8082b8e689d22f1204d04feb30ddaf095302482228996571373af8114e37e4b64b38514d0351d5add6dbee463b5cf9b92aadd78d6e4fbc39286812bfbed36c5f2b22deafc90fb414312c8ade179adcd2f9d2b406b109233d1c303b301b410b6fffa9dd9874e7bae37f9a05a51bc06f2b135a22aed700cd39d2e82c29ec99623468753ec4357a2c95332701577137a51cb06fd1d54dac4b0ae90096540c8b5746b53edf213a97abd3822c2b1e0def067faa767bcea6dff83a755e2ae63c056906d44798032b9ac8e956ae51a71076d3deeff65b23c57bb012133b1f15b80bfb6eff7185276ce12d030dc65cfd34021d7f4baa840682475e874436cd65fa55d1bccca0752a2be30ce9bfa368130a0443f450fedcf5fff9e30506f5e981cc7553c37a547b714764bda5ab93925316873b9137eea0a18baa3218cfdd6d299200adb24f0469865bafa761a751d877a5cc5ef252457932ec3f3c80b666ed159606fe17f49ec6bbfcb17b4652d4a41bcd6bba0db8a2fbcafef9af62dfd40ef1ed1a40bf3a21b3397fe64b3ff420b8617dd8dd23a8779f15360818ea14ee02c145331080f53c4e9f8dfcd05c8c4a3e0e02c2d6d641e98a1fc44d544cbc8602135be6480f45e33467858170e920144adb36cd8f4216fe75e53414eeaf1c8edb27eccd73bc1acd6e7a40feb96f8a037d63200f602081e260b1c33d112157880b3d9f080b4ed0f56f16119bd3252154746d0f8e39f43aa34b12bcdc051ef0d7b7a2939226c5cbaaa55092ec80e41eced9d1e949a4f688aa18c1735b8252d52cd8c3af046d63e24ec31c4952aa90e35590e954cde2b6493c0e47a2e106b05a9fb348b3b9d1d5e8d136df2e56771e7e4b82c95b77c0f97b897b6e553e078f357ea2d55f29f497ae2025b1299ca670ffda0d1dfe551ac9080bae8dbf7c0370a9cf8f70c0e99499a552e19356e840be14580716692dcbbd44c65c3b457d9a2efb75af0efac5d331632c1bd08ea582aac5bf11fde89fcc56209323f21e21151bde44e25288d1531dba59152c570c2510c29457baaaf072d2bb78ced510e95eab08e40f6aba8c2d0ec753df7332875d439fd0e8eb09a39b10a3c3071d9e2fc51023632dd8540279ad399f6c693f6f1b78451fef01e1f7d819d5e4a23332913d8761"),
             0x1f07ffff, 4, 0);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00040fe8ec8471911baa1db1266ea15dd06b4a8a5c453883c000b031973dce08"));
-        assert(genesis.hashMerkleRoot == uint256S("0xc4eaa58879081de3c24a7b117ed2b28300e7ec4c4c1dff1d3f1268b7857a4ddb"));
+        assert(consensus.hashGenesisBlock == uint256S("0x"+consensus.hashGenesisBlock.ToString()));
+        assert(genesis.hashMerkleRoot == uint256S("0x"+genesis.hashMerkleRoot.ToString()));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -166,14 +166,11 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (0, consensus.hashGenesisBlock)
-            (2500, uint256S("0x00000006dc968f600be11a86cbfbf7feb61c7577f45caced2e82b6d261d19744"))
-            (15000, uint256S("0x00000000b6bc56656812a5b8dcad69d6ad4446dec23b5ec456c18641fb5381ba"))
-            (67500, uint256S("0x000000006b366d2c1649a6ebb4787ac2b39c422f451880bc922e3a6fbd723616")),
-            1487767578,     // * UNIX timestamp of last checkpoint block
-            325430,         // * total number of transactions between genesis and last checkpoint
+            (0, consensus.hashGenesisBlock),
+            genesis.nTime,     // * UNIX timestamp of last checkpoint block
+            0,         // * total number of transactions between genesis and last checkpoint
                             //   (the tx=... number in the SetBestChain debug.log lines)
-            2777            // * estimated number of transactions per day after checkpoint
+            0            // * estimated number of transactions per day after checkpoint
                             //   total number of tx / (checkpoint block height / (24 * 24))
         };
 
@@ -255,7 +252,7 @@ public:
         consensus.nMajorityRejectBlockOutdated = 75;
         consensus.nMajorityWindow = 400;
         consensus.powLimit = uint256S("07ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.nPowAveragingWindow = 1;
+        consensus.nPowAveragingWindow = 0;
         assert(maxUint/UintToArith256(consensus.powLimit) >= consensus.nPowAveragingWindow);
         consensus.nPowMaxAdjustDown = 32; // 32% adjustment down
         consensus.nPowMaxAdjustUp = 16; // 16% adjustment up
@@ -371,7 +368,7 @@ public:
         consensus.nMajorityRejectBlockOutdated = 950;
         consensus.nMajorityWindow = 1000;
         consensus.powLimit = uint256S("0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f");
-        consensus.nPowAveragingWindow = 1;
+        consensus.nPowAveragingWindow = 0;
         assert(maxUint/UintToArith256(consensus.powLimit) >= consensus.nPowAveragingWindow);
         consensus.nPowMaxAdjustDown = 0; // Turn off adjustment down
         consensus.nPowMaxAdjustUp = 0; // Turn off adjustment up
