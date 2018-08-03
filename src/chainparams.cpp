@@ -109,10 +109,10 @@ public:
         /**
          * The message start string should be awesome! ⓩ❤
          */
-        pchMessageStart[0] = 0x24;
-        pchMessageStart[1] = 0xe9;
-        pchMessageStart[2] = 0x27;
-        pchMessageStart[3] = 0x64;
+        pchMessageStart[0] = 0xeb;
+        pchMessageStart[1] = 0x43;
+        pchMessageStart[2] = 0x69;
+        pchMessageStart[3] = 0x67;
         vAlertPubKey = ParseHex("04b7ecf0baa90495ceb4e4090f6b2fd37eec1e9c85fac68a487f3ce11589692e4a317479316ee814e066638e1db54e37a10689b70286e6315b1087b6615d179264");
         nDefaultPort = 8433;
         nMaxTipAge = 24 * 60 * 60;
@@ -270,10 +270,10 @@ public:
         consensus.vUpgrades[Consensus::UPGRADE_SAPLING].nProtocolVersion = 170006;
         consensus.vUpgrades[Consensus::UPGRADE_SAPLING].nActivationHeight = 252500;
 
-        pchMessageStart[0] = 0xfa;
-        pchMessageStart[1] = 0x1a;
-        pchMessageStart[2] = 0xf9;
-        pchMessageStart[3] = 0xbf;
+        pchMessageStart[0] = 0xf3;
+        pchMessageStart[1] = 0x1c;
+        pchMessageStart[2] = 0xf4;
+        pchMessageStart[3] = 0xba;
         vAlertPubKey = ParseHex("044e7a1553392325c871c5ace5d6ad73501c66f4c185d6b0453cf45dec5a1322e705c672ac1a27ef7cdaf588c10effdf50ed5f95f85f2f54a5f6159fca394ed0c6");
         nDefaultPort = 18133;
         nMaxTipAge = 24 * 60 * 60;
@@ -387,10 +387,10 @@ public:
         consensus.vUpgrades[Consensus::UPGRADE_SAPLING].nActivationHeight =
             Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
 
-        pchMessageStart[0] = 0xaa;
-        pchMessageStart[1] = 0xe8;
-        pchMessageStart[2] = 0x3f;
-        pchMessageStart[3] = 0x5f;
+        pchMessageStart[0] = 0xa3;
+        pchMessageStart[1] = 0xe7;
+        pchMessageStart[2] = 0x3a;
+        pchMessageStart[3] = 0x5b;
         nDefaultPort = 18544;
         nMaxTipAge = 24 * 60 * 60;
         nPruneAfterHeight = 1000;
