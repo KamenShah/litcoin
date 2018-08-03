@@ -132,9 +132,10 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0xfa550b592f0eab4beb3ee6749cebae28026f38900b8da113399b46f7e1db48a7"));
 
         vFixedSeeds.clear();
-        vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("litcoinfoundation.com", "seeder.litcoinfoundation.com")); // litcoin
+        vSeeds.clear(); 
 
+        //vSeeds.push_back(CDNSSeedData("litcoinfoundation.com", "seeder.litcoinfoundation.com")); // litcoin
+        vSeeds.push_back(CDNSSeedData("35.224.120.108", "35.224.120.108"));
 
         // guarantees the first 2 characters, when base58 encoded, are "t1"
         base58Prefixes[PUBKEY_ADDRESS]     = {0x1C,0xB8};
